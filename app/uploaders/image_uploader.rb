@@ -4,7 +4,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  #storage :file
+  storage :fog
   process resize_to_limit: [1000, 1000]
 
   # Override the directory where uploaded files will be stored.
